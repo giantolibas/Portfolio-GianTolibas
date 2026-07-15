@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Terminal, Archive } from 'lucide-react';
+import { Briefcase, Archive, HeartHandshake } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const experiences = [
@@ -44,13 +44,15 @@ const experiences = [
     period: 'May 2020 – Feb 2021',
     description: 'Premium IT technical support and account handling; Top Advisor of the Year 2020; promoted to Mentor for transitioning and new advisors.',
     type: 'work'
-  },
+  }
+];
+
+const volunteerWork = [
   {
     role: 'Program Coordinator',
     company: 'Called to Rescue Philippines',
     period: 'Oct 2024 – Present',
-    description: 'Plans and monitors anti-trafficking prevention, intervention, and survivor-support programs; collaborates with law enforcement, social workers, and community leaders; builds community awareness and resilience.',
-    type: 'volunteer'
+    description: 'Plans and monitors anti-trafficking prevention, intervention, and survivor-support programs; collaborates with law enforcement, social workers, and community leaders; builds community awareness and resilience.'
   }
 ];
 
@@ -90,9 +92,6 @@ export const ExperienceSection = () => {
                   <h3 className="font-bold text-lg text-foreground mt-2 leading-tight">{exp.role}</h3>
                   <span className="text-muted-foreground text-sm flex items-center gap-1">
                     {exp.company}
-                    {exp.type === 'volunteer' && (
-                      <span className="text-xs italic border border-border px-1.5 py-0.5 rounded-sm ml-2">Volunteer</span>
-                    )}
                   </span>
                 </div>
                 
@@ -106,6 +105,34 @@ export const ExperienceSection = () => {
           ))}
         </div>
         
+        {/* Volunteer Work */}
+        <div className="max-w-4xl mx-auto mt-20">
+          <div className="flex items-center gap-4 mb-8">
+            <HeartHandshake className="w-5 h-5 text-primary" />
+            <h3 className="text-2xl font-bold tracking-tight">Volunteer.Run()</h3>
+            <div className="h-px bg-border flex-1 ml-4" />
+          </div>
+
+          {volunteerWork.map((exp, idx) => (
+            <div
+              key={idx}
+              className="p-6 bg-card border border-border/50 rounded-sm hover:border-primary/40 transition-colors relative overflow-hidden group"
+            >
+              <div className="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/15 transition-colors" />
+              <div className="flex flex-col gap-1 mb-3">
+                <span className="text-xs font-mono text-primary bg-primary/10 w-fit px-2 py-0.5 rounded-sm">
+                  {exp.period}
+                </span>
+                <h4 className="font-bold text-lg text-foreground mt-2 leading-tight">{exp.role}</h4>
+                <span className="text-muted-foreground text-sm">{exp.company}</span>
+              </div>
+              <p className="text-sm text-muted-foreground mt-4 leading-relaxed border-l-2 border-primary/20 pl-3">
+                {exp.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
         {/* Early Experience / Archive */}
         <div className="max-w-4xl mx-auto mt-16 bg-card/50 border border-border/50 rounded-sm overflow-hidden">
           <button 
