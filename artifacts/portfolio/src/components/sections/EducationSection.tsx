@@ -48,16 +48,37 @@ export const EducationSection = () => {
             <h3 className="text-xl font-bold mb-4">Certifications & Training</h3>
             <ul className="space-y-3">
               {[
-                'COPC High Performance Management Techniques',
-                'Lean & Quality Management',
-                'CompTIA ITF+',
-                'AI Fundamentals — IBM SkillsBuild',
-                'Cisco Certificate in Ethical Hacking',
-                'Cisco Offensive Security Capture The Flag Certified'
+                {
+                  label: 'COPC High Performance Management Techniques',
+                  href: 'https://certificates.copc.com/b66ff345-70e4-44b0-92ee-0c99099fa05f#acc.H3Zvpcwd'
+                },
+                {
+                  label: 'AI Fundamentals with IBM SkillsBuild',
+                  href: 'https://www.credly.com/badges/73477ba7-f3b0-4acc-9d1b-02697e338721/public_url'
+                },
+                {
+                  label: 'Cisco Certificate in Ethical Hacking',
+                  href: 'https://www.credly.com/badges/ba408b96-51cc-447f-8958-c57b9718ca1b/public_url'
+                },
+                {
+                  label: 'Offensive Security Capture the Flag - Operation SMB Exploit',
+                  href: 'https://www.credly.com/badges/0c297a7f-5dc6-490b-a45c-65fbdc54af64/public_url'
+                },
+                {
+                  label: 'CompTIA IT Fundamentals+ (ITF+)',
+                  href: 'https://www.credly.com/badges/d26fde77-f9c8-4d3b-bb1d-dfde12846aad/public_url'
+                }
               ].map((cert, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors">
                   <span className="text-primary font-mono mt-1">{'>'}</span>
-                  <span>{cert}</span>
+                  <a
+                    href={cert.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4"
+                  >
+                    {cert.label}
+                  </a>
                 </li>
               ))}
             </ul>
