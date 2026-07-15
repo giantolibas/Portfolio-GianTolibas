@@ -1,6 +1,6 @@
 import React from 'react';
-import { Badge } from '@/components/ui/badge';
 import { Cpu, Code, ShieldAlert, LineChart } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const skillCategories = [
   {
@@ -9,7 +9,8 @@ const skillCategories = [
     skills: [
       'Risk Management', 'Security Compliance', 'Firewalls', 'IDS/IPS', 
       'ISO 27001', 'NIST', 'CIS Controls', 'Vulnerability Assessment', 
-      'Incident Response', 'Penetration Testing'
+      'Incident Response', 'Penetration Testing', 'FortiEDR', 'Cisco ETD',
+      'Panorama', 'Tenable', 'Bitsight', 'Mimecast', 'KnowBe4', 'TISAX'
     ]
   },
   {
@@ -25,7 +26,8 @@ const skillCategories = [
     skills: [
       'System Administration (Windows, Linux, macOS)', 
       'Hardware/Network Troubleshooting', 
-      'QRadar SIEM', 'CrowdStrike', 'Cisco Meraki', 'vSphere'
+      'QRadar SIEM', 'CrowdStrike', 'Cisco Meraki', 'vSphere',
+      'PRTG Monitoring', 'ADAudit'
     ]
   },
   {

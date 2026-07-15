@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, ArrowUpRight } from 'lucide-react';
+import { Briefcase, Terminal, Archive } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const experiences = [
@@ -7,36 +7,63 @@ const experiences = [
     role: 'Cybersecurity Governance & Operations Lead',
     company: 'CForce IT Solution',
     period: 'May 2025 – Present',
+    description: 'Orchestrates a multi-layered security ecosystem anchored by QRadar SIEM, integrating telemetry from CrowdStrike, FortiEDR, and Cisco ETD for advanced incident response. Manages enterprise network security and virtualization (Panorama firewall management, Cisco Meraki, vSphere, PRTG monitoring). Leads ISMS audit/alignment with ISO 27001, NIST CSF 2.0, and TISAX; runs Vendor Risk Management program; drives Enterprise Risk Management and Security Performance Management with Bitsight Core and Tenable; conducts Web Application Security deep dives; secures the human element via Mimecast, ADAudit, and KnowBe4.',
     type: 'work'
   },
   {
     role: 'IT College Instructor',
     company: 'Holy Angel University',
     period: 'July 2024 – 2025',
+    description: 'Delivered lectures and hands-on labs in Web Development & Design, Python, Java, Interface Design, and Thesis Writing. Guided capstone projects and research theses; mentored students in collaborative coding and problem-solving; contributed to curriculum development.',
     type: 'work'
   },
   {
     role: 'Business Development Representative',
-    company: 'Exergy Energy',
+    company: 'Exergy Energy (Remote)',
     period: 'Oct 2023 – June 2024',
+    description: 'Remote BDR handling lead generation, prospect qualification, outbound calling, and appointment setting; supported sales with research, online marketing, and sales materials.',
     type: 'work'
   },
   {
-    role: 'Quality Supervisor / Quality Coach / Tech Support',
+    role: 'Quality Supervisor',
     company: 'Majorel',
-    period: 'May 2020 – Sept 2023',
+    period: 'Sept 2021 – Sept 2023',
+    description: 'Drove business Quality Performance and COPC compliance; led client meetings and audits; managed and trained the Quality Team; earned COPC High Performance Management Techniques certification; led analytical data gathering and reporting.',
+    type: 'work'
+  },
+  {
+    role: 'Quality Coach',
+    company: 'Majorel',
+    period: 'Feb 2021 – Sept 2021',
+    description: 'Behavioral coaching, QA evaluations, DSAT analysis, calibration sessions; POC for the iOS+ Quality Team.',
+    type: 'work'
+  },
+  {
+    role: 'Technical Support / CSR IV',
+    company: 'Majorel',
+    period: 'May 2020 – Feb 2021',
+    description: 'Premium IT technical support and account handling; Top Advisor of the Year 2020; promoted to Mentor for transitioning and new advisors.',
     type: 'work'
   },
   {
     role: 'Program Coordinator',
     company: 'Called to Rescue Philippines',
-    period: 'Volunteer',
-    description: 'Combating human trafficking, community resilience, and survivor support',
+    period: 'Oct 2024 – Present',
+    description: 'Plans and monitors anti-trafficking prevention, intervention, and survivor-support programs; collaborates with law enforcement, social workers, and community leaders; builds community awareness and resilience.',
     type: 'volunteer'
   }
 ];
 
+const earlyExperience = [
+  { role: 'Sales Coordinator / Telemarketer', company: 'Bayt.com', period: 'Feb 2017 – Jan 2018', description: 'Lead generation averaging 6-8 clients/day, plus in-office IT support' },
+  { role: 'Customer Service & Technical Associate', company: 'Convergys', period: 'May 2015 – Oct 2016', description: 'Cricket Wireless support; twice recognized as top-performing agent' },
+  { role: 'Computer Teacher / Trainer', company: "L'Altra Montessori School", period: 'June 2014 – Mar 2015', description: 'Taught computing, Visual Basic, Photoshop, graphic design; managed school IT infrastructure' },
+  { role: 'Customer Service', company: 'Sutherland Global Services', period: 'Mar 2013 – May 2013', description: 'Seasonal sales account' }
+];
+
 export const ExperienceSection = () => {
+  const [showArchive, setShowArchive] = React.useState(false);
+
   return (
     <section id="experience" className="py-24 relative border-t border-border/50 bg-secondary/10">
       <div className="container mx-auto px-6 md:px-12">
@@ -60,17 +87,17 @@ export const ExperienceSection = () => {
                   <span className="text-xs font-mono text-primary bg-primary/10 w-fit px-2 py-0.5 rounded-sm">
                     {exp.period}
                   </span>
-                  <h3 className="font-bold text-lg text-foreground mt-2">{exp.role}</h3>
+                  <h3 className="font-bold text-lg text-foreground mt-2 leading-tight">{exp.role}</h3>
                   <span className="text-muted-foreground text-sm flex items-center gap-1">
                     {exp.company}
                     {exp.type === 'volunteer' && (
-                      <span className="text-xs italic border border-border px-1.5 rounded-sm ml-2">Volunteer</span>
+                      <span className="text-xs italic border border-border px-1.5 py-0.5 rounded-sm ml-2">Volunteer</span>
                     )}
                   </span>
                 </div>
                 
                 {exp.description && (
-                  <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                  <p className="text-sm text-muted-foreground mt-4 leading-relaxed border-l-2 border-primary/20 pl-3">
                     {exp.description}
                   </p>
                 )}
@@ -79,12 +106,36 @@ export const ExperienceSection = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <Button variant="outline" className="font-mono group">
-            Fetch Full History
-            <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </Button>
+        {/* Early Experience / Archive */}
+        <div className="max-w-4xl mx-auto mt-16 bg-card/50 border border-border/50 rounded-sm overflow-hidden">
+          <button 
+            onClick={() => setShowArchive(!showArchive)}
+            className="w-full p-4 flex items-center justify-between hover:bg-secondary/50 transition-colors font-mono text-sm text-muted-foreground"
+          >
+            <span className="flex items-center gap-2">
+              <Archive className="w-4 h-4" />
+              {showArchive ? 'CLOSE_ARCHIVE_LOG' : 'EXPAND_ARCHIVE_LOG'}
+            </span>
+            <span>{showArchive ? '[-]' : '[+]'}</span>
+          </button>
+          
+          {showArchive && (
+            <div className="p-6 border-t border-border/50 space-y-4">
+              {earlyExperience.map((exp, idx) => (
+                <div key={idx} className="flex flex-col md:flex-row md:items-start gap-1 md:gap-4 text-sm group">
+                  <div className="shrink-0 font-mono text-xs text-primary/60 md:w-36 pt-0.5 group-hover:text-primary transition-colors">
+                    {exp.period}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground/90">{exp.role} <span className="text-muted-foreground font-normal">| {exp.company}</span></div>
+                    <div className="text-muted-foreground mt-1 leading-relaxed">{exp.description}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
+        
       </div>
     </section>
   );

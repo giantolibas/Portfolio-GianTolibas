@@ -29,18 +29,19 @@ export const EducationSection = () => {
             
             <h3 className="text-xl font-bold mb-4">Certifications & Training</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors">
-                <span className="text-primary font-mono mt-1">{'>'}</span>
-                COPC High Performance Management Techniques
-              </li>
-              <li className="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors">
-                <span className="text-primary font-mono mt-1">{'>'}</span>
-                Lean & Quality Management
-              </li>
-              <li className="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors">
-                <span className="text-primary font-mono mt-1">{'>'}</span>
-                CompTIA ITF+
-              </li>
+              {[
+                'COPC High Performance Management Techniques',
+                'Lean & Quality Management',
+                'CompTIA ITF+',
+                'AI Fundamentals — IBM SkillsBuild',
+                'Cisco Certificate in Ethical Hacking',
+                'Cisco Offensive Security Capture The Flag Certified'
+              ].map((cert, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors">
+                  <span className="text-primary font-mono mt-1">{'>'}</span>
+                  <span>{cert}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
