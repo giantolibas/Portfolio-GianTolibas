@@ -12,14 +12,32 @@ export const EducationSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Degree */}
-          <div className="bg-card border border-border p-8 relative overflow-hidden group hover:border-primary/30 transition-colors">
-            <div className="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors" />
-            <GraduationCap className="w-8 h-8 text-primary mb-6" />
-            
-            <h3 className="text-xl font-bold mb-2">BS Computer Science</h3>
-            <p className="text-foreground/80 mb-1">Holy Angel University</p>
-            <p className="text-sm font-mono text-muted-foreground">2010 – 2015</p>
+          {/* Degrees */}
+          <div className="flex flex-col gap-8">
+            <div className="bg-card border border-border p-8 relative overflow-hidden group hover:border-primary/30 transition-colors flex-1">
+              <div className="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors" />
+              <div className="flex items-start justify-between mb-6">
+                <GraduationCap className="w-8 h-8 text-primary" />
+                <span className="text-xs font-mono uppercase tracking-wider text-primary border border-primary/30 bg-primary/10 px-2 py-1">
+                  In Progress
+                </span>
+              </div>
+
+              <h3 className="text-xl font-bold mb-2">
+                Professional Science Master's in Cybersecurity
+              </h3>
+              <p className="text-foreground/80 mb-1">Holy Angel University — Graduate School</p>
+              <p className="text-sm font-mono text-muted-foreground">June 2024 – Present</p>
+            </div>
+
+            <div className="bg-card border border-border p-8 relative overflow-hidden group hover:border-primary/30 transition-colors flex-1">
+              <div className="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors" />
+              <GraduationCap className="w-8 h-8 text-primary mb-6" />
+
+              <h3 className="text-xl font-bold mb-2">BS Computer Science</h3>
+              <p className="text-foreground/80 mb-1">Holy Angel University</p>
+              <p className="text-sm font-mono text-muted-foreground">2010 – 2015</p>
+            </div>
           </div>
 
           {/* Certifications */}
