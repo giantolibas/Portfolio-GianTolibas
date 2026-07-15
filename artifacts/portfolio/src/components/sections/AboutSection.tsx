@@ -42,7 +42,7 @@ export const AboutSection = () => {
           <div className="md:col-span-7 space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
               <span className="text-primary font-mono text-xl mr-2"> {'>'} </span>
-              Aspiring Security Analyst with a strong background in IT support, troubleshooting, and quality assurance. 
+              Aspiring Security Analyst and Web Developer with a strong background in IT support, troubleshooting, and quality assurance. 
             </p>
             <p>
               Passionate about cybersecurity, network security, and data protection, eager to gain hands-on experience in threat detection, vulnerability management, and security compliance.

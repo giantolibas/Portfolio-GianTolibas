@@ -35,7 +35,7 @@ export const HeroSection = () => {
           <p className="text-xl md:text-2xl text-muted-foreground font-light mb-8 max-w-lg leading-relaxed">
             Cybersecurity Governance & Operations Lead <br/> 
             <span className="text-foreground/80 text-lg md:text-xl font-mono mt-2 block">
-              | Aspiring Security Analyst
+              | Aspiring Security Analyst and Web Developer
             </span>
           </p>
 
