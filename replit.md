@@ -1,6 +1,6 @@
-# [Project name]
+# Gian Tolibas Portfolio
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Personal portfolio website for Gian Tolibas, an IT professional and aspiring Security Analyst — a single-page, dark cybersecurity-themed site with About, Skills, Experience, Education, and Contact sections.
 
 ## Run & Operate
 
@@ -22,7 +22,10 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/portfolio/` — the portfolio site (React + Vite, frontend-only, no backend)
+- `artifacts/portfolio/src/components/sections/` — one file per page section (Hero, About, Skills, Experience, Education, Contact)
+- `artifacts/portfolio/src/index.css` — theme tokens (dark charcoal/navy + neon cyber-teal accent)
+- `artifacts/portfolio/public/` — drop `profile-photo.jpg` and `about-photo.jpg` here to replace image placeholders
 
 ## Architecture decisions
 
@@ -30,7 +33,7 @@ _Populate as you build — non-obvious choices a reader couldn't infer from the 
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Single-page portfolio at `/` with sticky navbar, smooth-scrolling sections (About, Skills, Experience, Education, Contact), image placeholders with initials fallback, and mailto contact CTA (giantolibas@gmail.com).
 
 ## User preferences
 
