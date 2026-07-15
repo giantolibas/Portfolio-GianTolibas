@@ -14,7 +14,7 @@ export const AboutSection = () => {
         </div>
 
         <div className="grid md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-5 relative group">
+          <div className="md:col-span-4 md:col-start-2 relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-transparent blur opacity-50 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border bg-card flex items-center justify-center">
               <img 
