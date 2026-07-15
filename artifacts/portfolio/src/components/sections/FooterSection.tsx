@@ -60,11 +60,11 @@ export const FooterSection = () => {
               <h3 className="text-xl font-bold mb-6 font-mono text-primary uppercase text-sm tracking-widest border-b border-border/50 pb-2">External Nodes</h3>
               
               <div className="grid grid-cols-2 gap-4">
-                <a href="#" className="flex flex-col items-center justify-center gap-3 p-6 bg-secondary border border-border hover:border-primary hover:bg-primary/5 transition-all group">
+                <a href="https://www.linkedin.com/in/gian-tolibas-981029143/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 p-6 bg-secondary border border-border hover:border-primary hover:bg-primary/5 transition-all group">
                   <Linkedin className="w-8 h-8 text-muted-foreground group-hover:text-primary" />
                   <span className="font-mono text-sm text-foreground">LinkedIn</span>
                 </a>
-                <a href="#" className="flex flex-col items-center justify-center gap-3 p-6 bg-secondary border border-border hover:border-primary hover:bg-primary/5 transition-all group">
+                <a href="https://github.com/giantolibas" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 p-6 bg-secondary border border-border hover:border-primary hover:bg-primary/5 transition-all group">
                   <Github className="w-8 h-8 text-muted-foreground group-hover:text-primary" />
                   <span className="font-mono text-sm text-foreground">GitHub</span>
                 </a>
